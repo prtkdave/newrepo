@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment{
         REPO_URL = "https://githib.com/prtkdave/devops"
+               }
     stages {
         stage('Build') {
             steps {
@@ -11,7 +12,7 @@ pipeline {
                     ls
                     echo $REPO_URL
                    '''
-                }
+                
             }
         }
     }
