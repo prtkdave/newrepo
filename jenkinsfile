@@ -1,10 +1,10 @@
 pipeline {
     agent any
     environment{
-        REPO_URL = "https://githib.com/prtkdave/devops"
+        REPO_URL = "https://githib.com/prtkdave/devops.git"
                }
     stages {
-        stage('Build') {
+        stage('Hello') {
             steps {
                 sh 'echo "Hello World"'
                 sh '''
@@ -15,6 +15,16 @@ pipeline {
                 
             }
         }
+
+       stage('Checkout external proj') {
+           steps {
+                git branch: 'master',
+                credentialsId: 'prtkdave',
+                url: '$REPO_URL'
+
+            sh "ls -lat"
+        }
+    }
     }
 }
 
