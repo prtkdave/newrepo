@@ -18,7 +18,7 @@ pipeline {
 
        stage('Checkout external proj') {
            steps {
-                git branch: '*/master',
+                git branch: '*/develop',
                 credentialsId: '5b09e5e8-aca5-4bc3-ae64-da77adb44743',
                 url: '$REPO_URL'
 
