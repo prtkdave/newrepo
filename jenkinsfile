@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment{
-        REPO_URL = "https://githib.com/prtkdave/devops.git"
+        REPO_URL = "https://github.com/prtkdave/devops.git"
                }
     stages {
         stage('Hello') {
